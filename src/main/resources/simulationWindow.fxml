@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<BorderPane fx:id="borderPane"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="agh.ics.oop.presenter.SimulationWindow"
+            prefHeight="750.0" prefWidth="1200.0">
+    <center>
+        <VBox  style="-fx-padding: 0 0 50 10;" alignment="CENTER">
+            <Label fx:id="mapInfo" textAlignment="CENTER"/>
+            <HBox>
+                <GridPane fx:id="mapGrid" alignment="TOP_LEFT"/>
+                <VBox style="-fx-padding: 0 0 0 0;" alignment="BOTTOM_CENTER" spacing="3">
+                    <LineChart fx:id="lineChart" title="Simulation Statistics" prefWidth="600" prefHeight="250">
+                        <xAxis>
+                            <NumberAxis label="Day"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Value"/>
+                        </yAxis>
+                    </LineChart>
+                    <Label text="Number of days:"/>
+                    <Label fx:id="numberOfDays" text="0"/>
+                    <Label text="Number of animals:"/>
+                    <Label fx:id="numberOfAnimals" text="0"/>
+                    <Label text="Number of grasses:"/>
+                    <Label fx:id="numberOfGrasses" text="0"/>
+                    <Label text="Number of empty cells:"/>
+                    <Label fx:id="numberOfEmptyCells" text="0"/>
+                    <Label text="Dominant genotype:"/>
+                    <Label fx:id="dominantGenotype" text="-"/>
+                    <Label text="Average energy of animals:"/>
+                    <Label fx:id="averageEnergy" text="0"/>
+                    <Label text="Average length of life of dead animals:"/>
+                    <Label fx:id="averageLengthOfLife" text="-"/>
+                    <Label text="Average number of children of living animals:"/>
+                    <Label fx:id="averageNumberOfChildren" text="-"/>
+                </VBox>
+            </HBox>
+            <Button fx:id="pauseSimulationButton" text="Pause" onAction="#pauseSimulation"/>
+            <Button fx:id="resumeSimulationButton" text="Resume" onAction="#resumeSimulation"/>
+        </VBox>
+    </center>
+</BorderPane>
