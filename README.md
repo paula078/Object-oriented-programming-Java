@@ -1,7 +1,7 @@
 
 # Darwin World Simulator
 ## Simple simulator made for Object Oriented Programming course at AGH University (2023/2024)
-### The project was done collaboratively with <a href="https://github.com/paula078">Karol0801</a>.
+### The project was done collaboratively with <a href="https://github.com/Karol0801">Karol0801</a>..
 
 ### Technologies
 - Java
